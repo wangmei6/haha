@@ -1,0 +1,59 @@
+1、跨域
+    jsonp
+    服务器允许跨域：
+*******************************************
+es6:
+数组与字符串的扩展：判断数组当中是否存在某元素或字符串是否包含某字符
+var allowOrigin = [
+    "http://localhost:63342",
+    "http://127.0.0.1",
+    "http://10.9.22.194"
+]
+// console.log(allowOrigin.indexOf("http://localhost:63342"))
+// console.log(allowOrigin.includes("http://localhost:63342"))
+var str = "千锋教育";
+console.log(str.includes("千万"));
+***************************************************************
+//* 允许所有人访问
+ res.writeHead(200,{
+            "Access-Control-Allow-Origin":"*"//
+})
+// 允许 http://127.0.0.1
+ res.writeHead(200,{
+            "Access-Control-Allow-Origin":"http://127.0.0.1"//
+})
+// 允许多个：
+  console.log(req.headers.origin);
+    var allowOrigin = [
+        "http://localhost:63342",
+        "http://127.0.0.1",
+        "http://10.9.22.194"
+    ]
+    if(allowOrigin.includes(req.headers.origin)){
+        res.writeHead(200,{
+            "Access-Control-Allow-Origin":req.headers.origin// * 允许所有人访问
+        })
+    }
+************************************************************************
+同城帮：
+图书的管理。
+1、页面
+    图书的名称：输入框
+    图书的价格：文本框
+    图书的类型：下拉列表
+    图书的作者：文本框
+    是否推荐：单选
+    图书的标签：多选
+    提交按钮
+    xxx      xxx    xx    xx                     操作
+                                                  删除
+*********************************************************
+express-----------------------框架
+1、用法
+    1、下载
+        cnpm install express --save-dev
+        cnpm install
+        cnpm i
+    2、使用
+        const express = require("express");
+

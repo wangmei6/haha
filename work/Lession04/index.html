@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="btn" type="button" value = "点我吧">
+</body>
+<script>
+    var btn = document.querySelector("#btn");
+    btn.onclick = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open("get","http://127.0.0.1/sum?a=1&b=2");
+        xhr.send();
+        xhr.onload = function (ev) {
+            console.log(xhr.responseText);
+        }
+    }
+</script>
+
+</html>
