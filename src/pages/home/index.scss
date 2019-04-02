@@ -1,0 +1,22 @@
+.nav{
+    @include flexbox(); 
+    @include align-items(center);
+    @include justify-content(space-around);
+    @include rect(100%,0.44rem);
+    @include background-color(#f2f2f2);
+    .icon-xiaomilogo{
+        @include font-size(0.3rem);
+        @include text-color(#ff6700);
+    }
+    .icon-wode{
+        @include font-size(0.3rem);
+    }
+    input{
+        @include rect(2.2rem,0.35rem);
+        @include border-radius(0.1rem);
+        @include border(0);
+    }
+}
+.my-accordion .pad .am-accordion-content-box {
+    padding: 10px;
+  }
